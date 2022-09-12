@@ -10,6 +10,8 @@ app.get('/:word',
         let wordStatus = 'status'
         if (req.params.word !== 'favicon.ico') {
             let word = req.params.word;
+            
+            //this creates an array with permutations ['cat', 'atc', 'tca']
             let aWord = permutations(word);
             let foundStatus = false;
             let currentMatch = [];
